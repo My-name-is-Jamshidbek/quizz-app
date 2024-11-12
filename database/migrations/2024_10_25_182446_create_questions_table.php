@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('body');
             $table->string('question_type');
             $table->boolean('answered')->default(false);
+            $table->boolean('isOld')->default(false);
            // $table->boolean('right_option')->default(false);
             $table->foreignIdFor(Quiz::class);
             $table->string('slug')->unique();

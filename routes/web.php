@@ -7,7 +7,9 @@ use App\Http\Controllers\QuizController;
 use App\Http\Controllers\CheckResultsController;
 
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+//Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/', [\App\Http\Controllers\OAuth2Controller::class, 'login'])->name('home');
 
 Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.index');
 

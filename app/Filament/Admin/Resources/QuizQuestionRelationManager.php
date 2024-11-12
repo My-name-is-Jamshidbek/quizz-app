@@ -72,6 +72,4 @@ class QuizQuestionRelationManager extends RelationManager
                 ]),
             ]);
     }
-
-
 }
