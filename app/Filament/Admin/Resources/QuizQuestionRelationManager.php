@@ -53,7 +53,7 @@ class QuizQuestionRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('question')
             ->columns([
-                Tables\Columns\TextColumn::make('body')->html(),
+                Tables\Columns\TextColumn::make('body'),
                 TextColumn::make('slug')
             ])
             ->filters([
@@ -63,7 +63,7 @@ class QuizQuestionRelationManager extends RelationManager
                 Tables\Actions\CreateAction::make(),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Tables\Actions\EditAction::make()->url(fn ($record): string => route('filament.admin.resources.questions.edit', ['record' => $record])),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
@@ -72,4 +72,6 @@ class QuizQuestionRelationManager extends RelationManager
                 ]),
             ]);
     }
+
+
 }
