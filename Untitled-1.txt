@@ -1,0 +1,2 @@
+App\Models\Quiz::where('id', $quiz)->firstOrFail()
+questions.quiz_id
