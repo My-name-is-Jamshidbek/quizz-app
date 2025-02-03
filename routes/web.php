@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\OAuth2Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuestionController;
@@ -9,13 +10,10 @@ use App\Http\Controllers\CheckResultsController;
 
 //Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/', [\App\Http\Controllers\OAuth2Controller::class, 'login'])->name('home');
+Route::get('/', [OAuth2Controller::class, 'login'])->name('home');
 
-Route::get('oauth-login-student',[\App\Http\Controllers\OAuth2Controller::class,'loginStudent'])->name('oauth-login-student');
-Route::get('oauth-login-teacher',[\App\Http\Controllers\OAuth2Controller::class,'loginTeacher'])->name('oauth-login-teacher');
-
-Route::get('callback/student',[\App\Http\Controllers\OAuth2Controller::class,'callStudent'])->name('call-student');
-Route::get('callback/teacher',[\App\Http\Controllers\OAuth2Controller::class,'callTeacher'])->name('call-teacher');
+Route::get('oauth-login-student',[OAuth2Controller::class,'loginStudent'])->name('oauth-login-student');
+Route::get('callback/student',[OAuth2Controller::class,'callStudent'])->name('call-student');
 
 Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.index');
 

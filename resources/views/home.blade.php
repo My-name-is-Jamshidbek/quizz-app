@@ -1,5 +1,5 @@
 
-@vite('resources/css/styles.css')
+@vite('resources/css/app.css')
 <x-app-layout title="Home Page">
 
     <body class="font-light antialiased">

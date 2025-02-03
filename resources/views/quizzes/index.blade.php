@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="uz">
-@vite('resources/css/styles.css')
+@vite('resources/css/app.css')
 
 
 <x-app-layout>
