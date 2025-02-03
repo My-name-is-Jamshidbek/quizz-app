@@ -49,7 +49,7 @@ class OAuth2Controller extends Controller
 
     public function callStudent(Request $request)
     {
-        file_put_contents('test.txt', json_encode($request->all()));
+        file_put_contents('test.txt', 123);
 
         if ($request->has('code')) {
             // You have received the authorization code, now exchange it for an access token
@@ -96,9 +96,9 @@ class OAuth2Controller extends Controller
 //            Cookie::queue('user', json_encode($data), 60 * 24);
 //            Cookie::queue('selected_role', "student", 60 * 24);
 
-            return redirect()->route('first-page');
+            return redirect()->route('quiz');
         } else {
-            return redirect()->route('login-page');
+            return redirect()->route('/');
         }
     }
 
