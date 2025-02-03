@@ -28,7 +28,7 @@ class QuizController extends Controller
          //       }
 
         return view('quizzes.index', [
-//            'quizzes' => Quiz::latest(column: 'created_date')->take(value: '*')->get()
+            'quizzes' => Quiz::latest(column: 'created_date')->take(value: '*')->get()
         ]);
     }
 
