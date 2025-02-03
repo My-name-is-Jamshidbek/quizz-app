@@ -49,7 +49,7 @@ class OAuth2Controller extends Controller
 
     public function callStudent(Request $request)
     {
-        file_put_contents('test.txt', config('services.hemis.studentId'));
+        file_put_contents('test.txt', "123");
 
         if ($request->has('code')) {
             // You have received the authorization code, now exchange it for an access token
