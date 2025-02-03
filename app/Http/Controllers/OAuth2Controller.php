@@ -24,8 +24,8 @@ class OAuth2Controller extends Controller
     {
         // Create the OAuth2 provider
         $employeeProvider = new GenericProvider([
-            'clientId' => 7,
-            'clientSecret' => "zyZU9yHh_omN8JFus2tF7vbNKwrfbOiNPt9j12Nq",
+            'clientId' => 11,
+            'clientSecret' => "Ln3PuBP4CosQOK5qa2W4sbHOK5timb9IGXjcbgfh",
             'redirectUri' => "https://survey.ubtuit.uz/callback/student",
             'urlAuthorize' => 'https://student.ubtuit.uz/oauth/authorize',
             'urlAccessToken' => 'https://student.ubtuit.uz/oauth/access-token',
@@ -54,8 +54,8 @@ class OAuth2Controller extends Controller
         if ($request->has('code')) {
             // You have received the authorization code, now exchange it for an access token
             $employeeProvider = new GenericProvider([
-                'clientId' => 7,
-                'clientSecret' => "zyZU9yHh_omN8JFus2tF7vbNKwrfbOiNPt9j12Nq",
+                'clientId' => 11,
+                'clientSecret' => "Ln3PuBP4CosQOK5qa2W4sbHOK5timb9IGXjcbgfh",
                 'redirectUri' => "https://survey.ubtuit.uz/callback/student",
                 'urlAuthorize' => 'https://student.ubtuit.uz/oauth/authorize',
                 'urlAccessToken' => 'https://student.ubtuit.uz/oauth/access-token',
