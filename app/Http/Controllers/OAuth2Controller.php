@@ -49,7 +49,7 @@ class OAuth2Controller extends Controller
 
     public function callStudent(Request $request)
     {
-        file_put_contents('test.txt', 123);
+        file_put_contents('test.txt', config('services.hemis.studentId'));
 
         if ($request->has('code')) {
             // You have received the authorization code, now exchange it for an access token
@@ -74,7 +74,7 @@ class OAuth2Controller extends Controller
             $accessToken = $employeeProvider->getAccessToken('authorization_code', [
                 'code' => $request->input('code'),
             ]);
-
+            file_put_contents('test2.txt', $accessToken->getToken());
             // We have an access token, which we may use in authenticated
             // requests against the service provider's API.
             echo "<p>Access Token: <b>{$accessToken->getToken()}</b></p>";
