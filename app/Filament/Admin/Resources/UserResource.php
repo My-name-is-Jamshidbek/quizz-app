@@ -2,9 +2,9 @@
 
 namespace App\Filament\Admin\Resources;
 
-use App\Filament\Admin\Resources\UserChoicesRelationManagerResource\RelationManagers\UserChoicesRelationManager;
+use App\Filament\Admin\Resources\UserChoicesRelationManagerResource\RelationManagers\Choices\UserChoicesRelationManager;
 use App\Filament\Admin\Resources\UserResource\Pages;
-use App\Filament\Admin\Resources\UserResource\RelationManagers;
+//use App\Filament\Admin\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;

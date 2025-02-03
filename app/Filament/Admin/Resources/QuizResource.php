@@ -120,5 +120,5 @@ class QuizResource extends Resource
         ];
     }
 
-    
+
 }
