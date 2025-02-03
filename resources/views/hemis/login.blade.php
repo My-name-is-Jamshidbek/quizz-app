@@ -70,10 +70,6 @@
             <a href="{{route('oauth-login-student')}}" class="btn btn-outline-primary text-center">HEMIS Talaba profili orqali kirish</a>
         </div>
 
-        <div class="input-group border-1 mb-3 d-flex justify-content-center">
-            <a href="{{route('oauth-login-teacher')}}" class="btn btn-outline-primary text-center">HEMIS Xodim profili orqali kirish</a>
-        </div>
-
     </form>
 </div>
 
