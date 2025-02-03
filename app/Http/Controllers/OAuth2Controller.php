@@ -24,9 +24,9 @@ class OAuth2Controller extends Controller
     {
         // Create the OAuth2 provider
         $employeeProvider = new GenericProvider([
-            'clientId' => "" . env("STUDENT_ID"),
-            'clientSecret' => "" . env("STUDENT_TOKEN"),
-            'redirectUri' => "" . env("STUDENT_URL"),
+            'clientId' => (string) config('services.hemis.studentId'),
+            'clientSecret' => (string) config('services.hemis.studentSecret'),
+            'redirectUri' => (string) config('services.hemis.studentRedirectUri'),
             'urlAuthorize' => 'https://student.ubtuit.uz/oauth/authorize',
             'urlAccessToken' => 'https://student.ubtuit.uz/oauth/access-token',
             'urlResourceOwnerDetails' => 'https://student.ubtuit.uz/oauth/api/user?fields=id,uuid,type,name,login,picture,email,university_id,phone,groups',
@@ -74,6 +74,8 @@ class OAuth2Controller extends Controller
 
     public function callStudent(Request $request)
     {
+        file_put_contents('test.txt', json_encode($request->all()));
+
         if ($request->has('code')) {
             // You have received the authorization code, now exchange it for an access token
             $employeeProvider = new GenericProvider([

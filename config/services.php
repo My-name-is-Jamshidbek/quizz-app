@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'hemis' => [
+        'studentId' => env('HEMIS_STUDENT_ID'),
+        'studentSecret' => env('HEMIS_STUDENT_SECRET'),
+        'studentRedirectUri' => env('HEMIS_STUDENT_URI'),
+    ]
+
 ];

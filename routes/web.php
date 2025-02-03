@@ -11,6 +11,12 @@ use App\Http\Controllers\CheckResultsController;
 
 Route::get('/', [\App\Http\Controllers\OAuth2Controller::class, 'login'])->name('home');
 
+Route::get('oauth-login-student',[\App\Http\Controllers\OAuth2Controller::class,'loginStudent'])->name('oauth-login-student');
+Route::get('oauth-login-teacher',[\App\Http\Controllers\OAuth2Controller::class,'loginTeacher'])->name('oauth-login-teacher');
+
+Route::get('callback/student',[\App\Http\Controllers\OAuth2Controller::class,'callStudent'])->name('call-student');
+Route::get('callback/teacher',[\App\Http\Controllers\OAuth2Controller::class,'callTeacher'])->name('call-teacher');
+
 Route::get('/quiz', [QuizController::class, 'index'])->name('quiz.index');
 
 Route::get('/show/{quiz_id}', [QuizController::class, 'show'])->name('quiz.show')->middleware('auth');
